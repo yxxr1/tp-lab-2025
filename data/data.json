@@ -1,0 +1,29 @@
+[
+  {
+    "startTs": 1749228726669,
+    "durationMin": 30,
+    "distance": 6,
+    "maxSpeed":  16,
+    "minSpeed": 5,
+    "avgSpeed": 12,
+    "avgPulse": 100
+  },
+  {
+    "startTs": 1749228776669,
+    "durationMin": 30,
+    "distance": 6,
+    "maxSpeed":  16,
+    "minSpeed": 5,
+    "avgSpeed": 12,
+    "avgPulse": 100
+  },
+  {
+    "startTs": 1739214376669,
+    "durationMin": 30,
+    "distance": 6,
+    "maxSpeed":  16,
+    "minSpeed": 5,
+    "avgSpeed": 12,
+    "avgPulse": 100
+  }
+]
