@@ -33,7 +33,7 @@ export const Table: React.FC<Props> = ({ data }) => {
                         <td>{distance}</td>
                         <td>{maxSpeed}</td>
                         <td>{minSpeed}</td>
-                        <td>{avgPulse}</td>
+                        <td>{avgSpeed}</td>
                         <td>{avgPulse}</td>
                     </tr>
                 ))}
