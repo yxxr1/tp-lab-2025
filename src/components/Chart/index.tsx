@@ -22,6 +22,10 @@ export const Chart: React.FC<Props> = ({ data, extrapolatedData }) => {
             style: {
                 lineWidth: 2,
             },
+            point: {
+                shapeField: "circle",
+                sizeField: 3,
+            },
         };
     }, [data, extrapolatedData]);
 
