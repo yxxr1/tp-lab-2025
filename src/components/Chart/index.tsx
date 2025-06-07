@@ -19,6 +19,10 @@ export const Chart: React.FC<Props> = ({ data }) => {
         style: {
             lineWidth: 2,
         },
+        point: {
+            shapeField: "circle",
+            sizeField: 3,
+        },
     };
 
     return <Line {...config} />;
