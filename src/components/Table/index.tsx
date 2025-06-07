@@ -8,7 +8,7 @@ interface Props {
 const formatDate = (date: Date)=> {
     const pad = (n: number) => n.toString().length === 1 ? `0${n.toString()}` : n.toString()
 
-    return `${date.getFullYear()}-${pad(date.getMonth())}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}`;
+    return `${date.getFullYear()}-${pad(date.getMonth())}-${pad(date.getDate())}`;
 }
 
 export const Table: React.FC<Props> = ({ data }) => {
