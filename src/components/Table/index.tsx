@@ -9,7 +9,7 @@ interface Props {
 const formatDate = (date: Date)=> {
     const pad = (n: number) => n.toString().length === 1 ? `0${n.toString()}` : n.toString()
 
-    return `${date.getFullYear()}-${pad(date.getMonth())}-${pad(date.getDate())}`;
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
 }
 
 export const Table: React.FC<Props> = ({ data, extrapolatedData }) => {
@@ -41,12 +41,12 @@ export const Table: React.FC<Props> = ({ data, extrapolatedData }) => {
                 {data.map(({ startTs, durationMin, distance, maxSpeed, minSpeed, avgSpeed, avgPulse }, index) => (
                     <tr key={startTs}>
                         <td>{formatDate(new Date(startTs))}</td>
-                        <td>{durationMin}</td>
-                        <td>{distance}</td>
-                        <td>{maxSpeed}</td>
-                        <td>{minSpeed}</td>
-                        <td>{avgPulse}</td>
-                        <td>{avgPulse}</td>
+                        <td>{+durationMin}</td>
+                        <td>{+distance}</td>
+                        <td>{+maxSpeed}</td>
+                        <td>{+minSpeed}</td>
+                        <td>{+avgPulse}</td>
+                        <td>{+avgPulse}</td>
                     </tr>
                 ))}
                 {extrapolatedData.map(({ startTs, durationMin, distance, maxSpeed, minSpeed, avgSpeed, avgPulse }, index) => (
