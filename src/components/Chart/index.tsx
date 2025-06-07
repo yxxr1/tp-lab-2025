@@ -16,6 +16,9 @@ export const Chart: React.FC<Props> = ({ data }) => {
         yField: 'value',
         colorField: 'type',
         legend: { size: false },
+        style: {
+            lineWidth: 2,
+        },
     };
 
     return <Line {...config} />;
