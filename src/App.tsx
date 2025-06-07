@@ -13,7 +13,7 @@ function App() {
   return (
       <>
         <FileButton onFile={(data) => setData(data)} />
-        <Table data={[...data, ...extrapolatedData]} />
+        <Table data={data} extrapolatedData={extrapolatedData} />
       </>
   );
 }
