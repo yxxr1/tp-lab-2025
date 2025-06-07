@@ -19,6 +19,7 @@ function App() {
         <div>
           <span>Дней экстраполяции: </span>
           <input type="number" onChange={(e) => setExtrapolationDays(+e.target.value)} value={extrapolationDays} />
+          <span>({data.length} max)</span>
         </div>
         <Table data={data} extrapolatedData={extrapolatedData} />
         <Chart data={data} extrapolatedData={extrapolatedData} />
