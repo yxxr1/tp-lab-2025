@@ -1,29 +1,29 @@
 [
   {
-    "startTs": 1749228726669,
+    "startTs": 1749319820650,
     "durationMin": 30,
     "distance": 6,
     "maxSpeed":  16,
     "minSpeed": 5,
     "avgSpeed": 12,
-    "avgPulse": 100
+    "avgPulse": 110
   },
   {
-    "startTs": 1749228776669,
+    "startTs": 1749406220650,
     "durationMin": 30,
     "distance": 6,
     "maxSpeed":  16,
     "minSpeed": 5,
     "avgSpeed": 12,
-    "avgPulse": 100
+    "avgPulse": 120
   },
   {
-    "startTs": 1739214376669,
+    "startTs": 1749492620650,
     "durationMin": 30,
     "distance": 6,
-    "maxSpeed":  16,
+    "maxSpeed":  11,
     "minSpeed": 5,
     "avgSpeed": 12,
-    "avgPulse": 100
+    "avgPulse": 90
   }
 ]
