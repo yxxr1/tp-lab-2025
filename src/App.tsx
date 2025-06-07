@@ -15,7 +15,7 @@ function App() {
       <>
         <FileButton onFile={(data) => setData(data)} />
         <Table data={data} extrapolatedData={extrapolatedData} />
-        <Chart data={data} />
+        <Chart data={data} extrapolatedData={extrapolatedData} />
       </>
   );
 }
