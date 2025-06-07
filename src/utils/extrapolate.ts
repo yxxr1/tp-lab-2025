@@ -1,15 +1,14 @@
 import { DataRecord } from "../types";
-import { ExtrapolationDays } from "../config";
 
 const dayMs = 24 * 60 * 60 * 1000;
 
-export const extrapolateData = (data: DataRecord[]) => {
-  if (data.length < ExtrapolationDays) {
+export const extrapolateData = (data: DataRecord[], extrapolationDays: number) => {
+  if (!data.length || data.length < extrapolationDays) {
     return [];
   }
 
   const result = [];
-  const startIndex = data.length - ExtrapolationDays;
+  const startIndex = data.length - extrapolationDays;
   let lastTs = data[data.length - 1].startTs;
   const currentSum = {
     durationMin: 0,
@@ -34,12 +33,12 @@ export const extrapolateData = (data: DataRecord[]) => {
     lastTs += dayMs;
     const newRecord = {
       startTs: lastTs,
-      durationMin: Math.round(currentSum.durationMin / ExtrapolationDays),
-      distance: Math.round(currentSum.distance / ExtrapolationDays),
-      maxSpeed: Math.round(currentSum.maxSpeed / ExtrapolationDays),
-      minSpeed: Math.round(currentSum.minSpeed / ExtrapolationDays),
-      avgSpeed: Math.round(currentSum.avgSpeed / ExtrapolationDays),
-      avgPulse: Math.round(currentSum.avgPulse / ExtrapolationDays),
+      durationMin: Math.round(currentSum.durationMin / extrapolationDays),
+      distance: Math.round(currentSum.distance / extrapolationDays),
+      maxSpeed: Math.round(currentSum.maxSpeed / extrapolationDays),
+      minSpeed: Math.round(currentSum.minSpeed / extrapolationDays),
+      avgSpeed: Math.round(currentSum.avgSpeed / extrapolationDays),
+      avgPulse: Math.round(currentSum.avgPulse / extrapolationDays),
     };
     result.push(newRecord);
     const record = data[i];
