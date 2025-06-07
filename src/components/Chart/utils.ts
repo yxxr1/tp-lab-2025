@@ -7,12 +7,12 @@ export interface ChartData {
     type: string;
 }
 
-export const mapData = (data: DataRecord[]) => data.reduce<ChartData[]>((acc, record) => {
+export const mapData = (data: DataRecord[], type?: string) => data.reduce<ChartData[]>((acc, record) => {
     ChartFields.forEach((field) => {
         acc.push({
             startTs: record.startTs,
             value: record[field],
-            type: field,
+            type: type ? `${field}-${type}` : field,
         });
     });
 
