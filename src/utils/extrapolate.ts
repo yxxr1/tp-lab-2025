@@ -1,6 +1,6 @@
 import { DataRecord } from "../types";
+import { ExtrapolationDays } from "../config";
 
-const ExtrapolationDays = 3;
 const dayMs = 24 * 60 * 60 * 1000;
 
 export const extrapolateData = (data: DataRecord[]) => {
