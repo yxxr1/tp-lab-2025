@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { FileButton } from "./components/FileButton";
 import { Table } from "./components/Table";
 import { DataRecord } from "./types";
+import { Chart } from "./components/Chart";
 import { extrapolateData } from "./utils/extrapolate";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <>
         <FileButton onFile={(data) => setData(data)} />
         <Table data={data} extrapolatedData={extrapolatedData} />
+        <Chart data={data} />
       </>
   );
 }
