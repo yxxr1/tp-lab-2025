@@ -21,6 +21,7 @@ export const Chart: React.FC<Props> = ({ data, extrapolatedData }) => {
             legend: { size: false },
             style: {
                 lineWidth: 2,
+                lineDash: (items: ChartData[]) => items[0].type.includes("-extrapolated") ? [2, 4] : [0, 0],
             },
         };
     }, [data, extrapolatedData]);
