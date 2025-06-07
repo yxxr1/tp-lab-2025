@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tp-lab-2025/static/css/main.93a0497a.css",
+    "main.js": "/tp-lab-2025/static/js/main.13272669.js",
+    "index.html": "/tp-lab-2025/index.html",
+    "main.93a0497a.css.map": "/tp-lab-2025/static/css/main.93a0497a.css.map",
+    "main.13272669.js.map": "/tp-lab-2025/static/js/main.13272669.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93a0497a.css",
+    "static/js/main.13272669.js"
+  ]
+}
