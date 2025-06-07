@@ -9,11 +9,13 @@ export interface ChartData {
 
 export const mapData = (data: DataRecord[], type?: string) => data.reduce<ChartData[]>((acc, record) => {
     ChartFields.forEach((field) => {
-        acc.push({
-            startTs: record.startTs,
-            value: record[field],
-            type: type ? `${field}-${type}` : field,
-        });
+        if (!isNaN(+record[field])) {
+            acc.push({
+                startTs: record.startTs,
+                value: record[field],
+                type: type ? `${field}-${type}` : field,
+            });
+        }
     });
 
     return acc;
